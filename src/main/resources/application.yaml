@@ -42,3 +42,10 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:${server.port}/eureka/}
